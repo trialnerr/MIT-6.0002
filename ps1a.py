@@ -1,6 +1,6 @@
 ###########################
 # 6.0002 Problem Set 1a: Space Cows 
-# Name:
+# Name: Bongi Sibanda 
 # Collaborators:
 # Time:
 
@@ -110,13 +110,14 @@ def brute_force_cow_transport(cows,limit=10):
     for partition in get_partitions(cows.keys()):  
         pass_test = True
         good_partition = []
+        
         for trip in partition:
             total_weight = 0 
             for cow in trip: 
                 total_weight += int(cows[cow])
             if total_weight <= limit: 
                 good_partition.append(trip)
-            
+         
         if len(partition) != len(good_partition):
             pass_test = False
         
